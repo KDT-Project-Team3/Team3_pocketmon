@@ -17,7 +17,8 @@ public class LunaPokemon extends Pokemon {
             this.evolved = true; // 진화 상태 업데이트
             System.out.println("어? 어라 포켓몬이 이상하다...");
             System.out.println(getPokemonName() + "이(가) 진화합니다!");
-            return new EvolvedPokemon(getPokemonName() + " (진화형)", getHP() + 20, getLevel());
+            String evolvedName = PokeDex.getEvolvePokemon(getPokemonName());
+            return new EvolvedPokemon(evolvedName, getHP() + 20, getLevel());
         } else {
             System.out.println(getPokemonName() + "은(는) 이미 진화했습니다!");
         }

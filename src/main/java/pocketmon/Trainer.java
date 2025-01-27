@@ -19,11 +19,8 @@ public class Trainer implements ITrainer {
     public Pokemon encounterWildPokemon() {
         List<Pokemon> wildPokemons = List.of(
                 new FlyPokemon("구구", 30, 3), // 구구도 FlyPokemon으로 처리
-                new FlyPokemon("피죤", 70, 10),
-                new SurfPokemon("잉어킹", 25, 2),
-                new LegendPokemon("루기아", 120, 20),
-                new MysticPokemon("뮤츠", 150, 30),
-                new SurfPokemon("꼬부기", 20,3)
+                new LunaPokemon("푸린", 40, 4),
+                new LunaPokemon("삐삐", 35, 3)
         );
         Random random = new Random();
         return wildPokemons.get(random.nextInt(wildPokemons.size()));
