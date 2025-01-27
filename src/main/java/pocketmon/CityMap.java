@@ -1,13 +1,10 @@
 package pocketmon;
 
 import java.util.Map;
-import java.util.Scanner;
 
 public class CityMap {
     // 지도 및 위치 이동 관련 클래스
     // 객체화하지 않고 static으로 선언
-    // Scanner 객체 생성
-    Scanner inputReader = new Scanner(System.in);
 
     // 도시 선언
     static City palletTown = new City("태초마을"); // ?? : 태초마을이야!
