@@ -19,10 +19,6 @@ public class PokeDex {
             pokemonByCategory.put(category, new HashMap<>());
         }
 
-        // 진화 트리 초기화
-        evolveMap.put("이상해씨", "이상해풀");
-        evolveMap.put("구구", "피죤");
-
         // 일반 포켓몬 데이터
         Pokemon squirtle = new Pokemon("꼬부기", 50, 5);
         Pokemon charmander = new Pokemon("파이리", 45, 5);
@@ -57,6 +53,10 @@ public class PokeDex {
         pokemonByCategory.get(PokeCategory.LEGENDARY).put("루기아", lugia);
         pokemonByCategory.get(PokeCategory.MYSTIC).put("뮤츠", mewtwo);
         pokemonByCategory.get(PokeCategory.EARTH).put("이상해씨", bulbasaur);
+
+        // 진화 관계 추가
+        evolveMap.put("파이리", "리자몽");
+        evolveMap.put("구구", "피죤");
     }
 
     public static Pokemon searchPokemon(String name) {
@@ -69,5 +69,9 @@ public class PokeDex {
 
     public static Map<String, Pokemon> getAllPokemon() {
         return pokemonByName;
+    }
+
+    public static String searchEvolvePokemon (String name) {
+        return evolveMap.get(pokemonByName.get(name));
     }
 }
