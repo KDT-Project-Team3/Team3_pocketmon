@@ -37,7 +37,7 @@ public class Pokemon implements IPokemon {
     @Override
     public Pokemon evolve() {
         System.out.println(this.pokemonName + "이(가) 진화합니다!");
-        String evolvedName = PokeDex.searchEvolvePokemon(this.pokemonName); // 진화 트리에서 이름 가져오기
-        return new EvolvedPokemon(evolvedName, this.HP + 20, this.level + 1); // 진화한 포켓몬 객체 생성 후 반환
+        return new EvolvedPokemon(this.pokemonName + " 진화형", this.HP + 20, this.level + 1);
     }
+
 }
