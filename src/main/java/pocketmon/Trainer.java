@@ -6,6 +6,12 @@ import java.util.*;
 
 @Getter
 public class Trainer implements ITrainer {
+
+    @Override
+    public String toString() {
+        return getName() ;
+    }
+
     public String name;
     //상대 트레이너 포켓몬 조회 위해 private => public 으로 교체
     public List<Pokemon> capturedPokemonList = new ArrayList<>();
